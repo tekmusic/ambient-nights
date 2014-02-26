@@ -8,9 +8,9 @@
     {% for post in site.posts %}
       <item>
         <title>{{ post.title }}</title>
-        <link>{{ post.link }}</link>
+        <link>{{ post.download }}</link>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <guid>{{ post.link }}</guid>
+        <guid>{{ post.download }}</guid>
       </item>
     {% endfor %}
   </channel>
