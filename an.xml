@@ -14,6 +14,7 @@ title: rss
         <link>{{ post.download }}</link>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <guid>{{ post.download }}</guid>
+        <enclosure url="{{ post.download }}" length="{{ post.length }}" type="audio/mpeg" />
       </item>
     {% endfor %}
   </channel>
