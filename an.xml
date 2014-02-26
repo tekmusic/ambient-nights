@@ -1,0 +1,17 @@
+<rss version="2.0">
+  <channel>
+    <title>Ambient Nights</title>
+    <link>http://tekmusic.github.io/ambient-nights</link>
+    <description>Ambient Nights</description>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    
+    {% for post in site.posts %}
+      <item>
+        <title>{{ post.title }}</title>
+        <link>{{ post.link }}</link>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <guid>{{ post.link }}</guid>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
