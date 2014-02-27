@@ -10,7 +10,7 @@ title: rss
     
     {% for post in site.posts %}
       <item>
-        <title>{{ post.title }}</title>
+        <title>{{ post.title | xml_escape }}</title>
         <link>{{ post.download }}</link>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <guid>{{ post.download }}</guid>
