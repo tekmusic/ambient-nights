@@ -1,0 +1,32 @@
+---
+title: index
+---
+
+<html>
+<head>
+<title>Ambient Nights</title>
+</head>
+<body>
+  <h1>Ambient Nights - direct downloads</h1>
+
+  <p>
+    All of the works posted here belong to <a href="http://www.ambient-nights.org/">Ambient Nights</a>.  
+    Please visit their site and give them love and donations.
+  </p>
+
+  <p>The mixes are posted here simply so I can create a podcast feed without overloading their servers with downloads.</p>
+
+  <h2>Ambient Nights - Named series</h2>
+
+  <p><a href="/an.xml">Podcast feed</a></p>
+
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        {{ post.date }} &ndash;
+        <a href="{{ post.download }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
